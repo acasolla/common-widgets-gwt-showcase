@@ -1,0 +1,47 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field="res" type="it.softphone.commons.gwt.showcase.client.resources.Resources" />
+	<ui:with field="css" type="it.softphone.commons.gwt.showcase.client.resources.CssResource" />
+
+	<ui:style>
+		
+	</ui:style>
+	<g:DockLayoutPanel width="100%" height="100%">
+		<g:north size='60'>
+			<g:FlowPanel styleName="{css.getMainCss.mainTopContainer}">
+				<g:HTML text="GWT Common Widgets" />
+			</g:FlowPanel>
+		</g:north>
+		<g:center>
+			<g:SimplePanel ui:field='centerPanel' styleName="{css.getMainCss.mainCenterContainer}"/>
+		</g:center>
+		<g:west size='250'>
+			<g:FlowPanel styleName="{css.getMainCss.mainWestContainer}">
+				<g:Tree ui:field="tree">
+					<g:TreeItem text="Base">
+						<g:HTML ui:field="link">HTMLLink</g:HTML>
+						<g:HTML ui:field="hint">HintTextBox</g:HTML>
+						<g:HTML ui:field="mask">Mask</g:HTML>
+						<g:HTML ui:field="portrait">Portrait</g:HTML>
+						<g:HTML ui:field="richTextArea">RichTextAreaHint</g:HTML>
+						<g:HTML ui:field="searchBox">SearchBox</g:HTML>
+					</g:TreeItem>
+					<g:TreeItem text="Social">
+						<g:HTML ui:field="comment">CommentBox</g:HTML>
+						<g:HTML ui:field="commentList">CommentBoxList</g:HTML>
+						<g:HTML ui:field="feed">FeedBox</g:HTML>
+						<g:HTML ui:field="reply">ReplyBox</g:HTML>
+					</g:TreeItem>
+					<g:TreeItem text="Tag">
+						<g:HTML ui:field="tag">TagBox</g:HTML>
+					</g:TreeItem>
+					<g:TreeItem text="List">
+						<g:HTML ui:field="simpleFormDetail">Simple FormDetail DataGrid</g:HTML>
+						<g:HTML ui:field="advancedFormDetail">Advanced FormDetail DataGrid</g:HTML>
+					</g:TreeItem>
+				</g:Tree>
+
+			</g:FlowPanel>
+		</g:west>
+	</g:DockLayoutPanel>
+</ui:UiBinder> 

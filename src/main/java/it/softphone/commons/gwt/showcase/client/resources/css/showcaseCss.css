@@ -1,0 +1,86 @@
+@external gwt-HTML;
+@external gwt-TreeItem;
+@external gwt-TreeItem-selected;
+@external htmlLink;
+
+.gwt-TreeItem > .gwt-HTML{
+	height: 22px;
+	padding:2px 0px 2px 5px;
+
+}
+.gwt-TreeItem-selected > .gwt-HTML{
+	background-color:#06C;
+	cursor:pointer;
+	color:#FFF;
+}
+
+.codeContainer{
+	padding:10px;
+	background-color: #f0f0f0;
+	height: 90%;
+	overflow: auto;
+}
+
+.exampleContainer{
+	margin-top:40px;
+}
+
+.baseContainer{
+	padding:10px;
+	width:95%;
+	height: 95%;
+}
+.mainCenterContainer{
+	height: 100%;
+	width: 100%;
+	padding:15px;
+	border: 1px solid;
+	border-right: none;
+	border-bottom: none;
+}
+.mainTopContainer {
+	background: -webkit-gradient(linear, literal("left top"),
+            literal("right bottom"), from(#e3e3e3), to(#c3c3c3) );
+	padding: 20px;
+}
+
+.mainTopContainer>.gwt-HTML {
+	margin-left:43%;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.mainWestContainer {
+	background: -webkit-gradient(linear, literal("left top"),
+            literal("right bottom"), from(#e3e3e3), to(#c3c3c3) );
+	
+}
+
+.baseToolbar {
+	  background: -webkit-gradient(linear, literal("left top"),
+            literal("left bottom"), from(#AF3B2C), to(#a61904) );
+    height:25px;
+	display: -moz-box;
+	-moz-box-orient: horizontal;
+	-moz-box-align: center;
+	/* Safari and Chrome */
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-align: center;
+	/* W3C */
+	display: box;
+	box-orient: horizontal;
+	box-align: center;
+}
+
+.baseToolbar > .gwt-HTML {
+	color:#FFF;
+	margin-right: 10px;
+	margin-left:10px;
+	font-size: 16px;
+}
+
+.baseToolbar > .gwt-HTML:hover {
+	text-decoration: underline;
+	cursor:pointer;
+}

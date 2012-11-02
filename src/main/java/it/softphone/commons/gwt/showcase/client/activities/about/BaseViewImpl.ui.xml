@@ -1,0 +1,15 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field="res" type="it.softphone.commons.gwt.showcase.client.resources.Resources" />
+	<ui:with field="css" type="it.softphone.commons.gwt.showcase.client.resources.CssResource" />
+
+	<g:FlowPanel styleName="{css.getMainCss.baseContainer}">
+		<g:FlowPanel styleName="{css.getMainCss.baseToolbar}">
+			<g:HTML ui:field="example">Example</g:HTML>
+			<g:HTML ui:field="style">CSS Style</g:HTML>
+			<g:HTML ui:field="source">Source Code</g:HTML>
+		</g:FlowPanel>
+	<g:FlowPanel ui:field="container" />
+
+	</g:FlowPanel>
+</ui:UiBinder> 
