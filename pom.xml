@@ -12,7 +12,14 @@
 	<artifactId>common-widgets-gwt-showcase</artifactId>
 	<packaging>war</packaging>
 	<name>common-widgets-gwt-showcase</name>
-
+	<repositories>
+	<repository>
+	  <id>common-widgets-gwt</id>
+	  <name>common-widgets-gwt repository on GitHub</name>
+	  <url>http://acasolla.github.com/common-widgets-gwt/repository/</url>
+	</repository>
+</repositories>
+	
 	<properties>
 		<!-- Convenience property to set the GWT version -->
 		<gwtVersion>2.5.0-rc1</gwtVersion>

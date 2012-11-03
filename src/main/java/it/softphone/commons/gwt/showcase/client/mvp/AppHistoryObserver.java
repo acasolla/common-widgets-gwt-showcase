@@ -52,7 +52,7 @@ public class AppHistoryObserver implements HistoryObserver {
 				UIEntry entry = event.getEntry();
 				
 				switch(entry){
-				case ABOUT:
+				case HOME:
 					place = new HomePlace();
 					break;
 				case HINT_TEXT_BOX:

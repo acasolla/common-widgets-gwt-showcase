@@ -25,7 +25,8 @@ import com.google.gwt.place.shared.WithTokenizers;
  * annotation or by extending PlaceHistoryMapperWithFactory and creating a
  * separate TokenizerFactory.
  */
-@WithTokenizers( {MainPlace.Tokenizer.class,
+@WithTokenizers( {HomePlace.Tokenizer.class,
+				  MainPlace.Tokenizer.class,
 				  HintTextBoxPlace.Tokenizer.class,
 				  HomePlace.Tokenizer.class,
 				  MaskPlace.Tokenizer.class,

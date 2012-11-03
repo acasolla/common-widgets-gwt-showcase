@@ -15,38 +15,26 @@
  */
 package it.softphone.commons.gwt.showcase.client.activities;
 
-import it.softphone.rd.gwt.client.widget.base.HTMLLink;
-
-import com.google.gwt.core.client.GWT;
+import com.google.gwt.core.shared.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.FlowPanel;
-import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.Widget;
 
 /**
  * Sample implementation of {@link HomeView}.
  */
 public class HomeViewImpl extends Composite implements HomeView {
 
-	private FlowPanel container = new FlowPanel();
+	interface  HomeViewImplUiBinder extends UiBinder<Widget, HomeViewImpl>{}
+	
+	private static HomeViewImplUiBinder uiBinder = GWT
+			.create(HomeViewImplUiBinder.class);
 	
 	public HomeViewImpl() {
-		initWidget(container);
-		container.add(new HTML("<h1>About</h1>"));
-		HTMLLink link = new HTMLLink("javadoc");
-		link.addClickHandler(new ClickHandler() {
-			
-			@Override
-			public void onClick(ClickEvent event) {
-				
-				Window.Location.replace("http://acasolla.github.com/common-widgets-gwt/docs");
-				
-			}
-		});
-		
-		container.add(link);
+		initWidget(uiBinder.createAndBindUi(this));
 	}
 
 	@Override
@@ -54,7 +42,25 @@ public class HomeViewImpl extends Composite implements HomeView {
 	
 	}
 
+	@UiHandler("soul")
+	void onSoulClick(ClickEvent event) {
+		Window.Location.replace("http://www.soulsoftware.it/");
+	}
+
+	@UiHandler("docs")
+	void onDocsClick(ClickEvent event) {
+		Window.Location.replace("http://acasolla.github.com/common-widgets-gwt/docs");
+	}
+
+	@UiHandler("libsource")
+	void onLibClick(ClickEvent event) {
+		Window.Location.replace("https://github.com/acasolla/common-widgets-gwt");
+	}
 	
+	@UiHandler("showsource")
+	void onShowClick(ClickEvent event) {
+		Window.Location.replace("https://github.com/acasolla/common-widgets-gwt-showcase");
+	}
 	
 	
 	

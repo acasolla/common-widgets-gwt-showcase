@@ -2,6 +2,7 @@ package it.softphone.commons.gwt.showcase.client.activities;
 
 import it.softphone.commons.gwt.showcase.client.mvp.NavigationEvent;
 import it.softphone.commons.gwt.showcase.client.mvp.NavigationEvent.UIEntry;
+import it.softphone.rd.gwt.client.widget.base.HTMLLink;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -24,6 +25,7 @@ public class MainViewImpl extends Composite implements MainView{
 	private EventBus bus;
 	 @UiField SimplePanel centerPanel;
 	@UiField Tree tree;
+	@UiField HTMLLink home;
 	
 	public MainViewImpl() {
 		initWidget(uiBinder.createAndBindUi(this));
@@ -33,7 +35,7 @@ public class MainViewImpl extends Composite implements MainView{
 	
 		
 	public void addHandlers(){
-	
+		
 	}
 	
 	
@@ -50,6 +52,10 @@ public class MainViewImpl extends Composite implements MainView{
 		centerPanel.setWidget(w);
 	}
 
+	@UiHandler("home")
+	void onHomeClick(ClickEvent event) {
+		NavigationEvent.fire(bus, UIEntry.HOME);
+	}
 
 	
 	@UiHandler("hint")

@@ -42,7 +42,7 @@ public class ClientFactoryImpl implements ClientFactory
 	private static final EventBus eventBus = new SimpleEventBus();
 	private static final PlaceController placeController = new PlaceController(eventBus);
 	private static final MainViewImpl main = new MainViewImpl();
-	private static final HomeViewImpl about = new HomeViewImpl();
+	private static final HomeViewImpl home = new HomeViewImpl();
 
 	private static final HintTextBoxViewImpl hintTextBox = new HintTextBoxViewImpl();
 	private static final MaskViewImpl mask = new MaskViewImpl();
@@ -77,8 +77,8 @@ public class ClientFactoryImpl implements ClientFactory
 
 
 	@Override
-	public HomeView getAboutView() {
-		return about;
+	public HomeView getHomeView() {
+		return home;
 	}
 
 

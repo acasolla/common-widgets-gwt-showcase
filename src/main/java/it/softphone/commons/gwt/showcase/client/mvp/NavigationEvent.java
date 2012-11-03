@@ -13,7 +13,7 @@ public class NavigationEvent extends Event<NavigationEvent.Handler> {
 		RICH_TEXT_AREA,
 		SEARCH_BOX,
 		HTML_LINK,
-		ABOUT,
+		HOME,
 		COMMENT_BOX,
 		COMMENT_BOX_LIST,
 		FEED_BOX,

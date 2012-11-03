@@ -25,7 +25,7 @@ public interface ClientFactory
 	PlaceController getPlaceController();
 	
 	MainView getMainView();
-	HomeView getAboutView();
+	HomeView getHomeView();
 	
 	HintTextBoxView getHintTextBoxView();
 	MaskView getMaskView();

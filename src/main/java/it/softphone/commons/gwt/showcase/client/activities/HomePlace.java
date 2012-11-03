@@ -37,7 +37,7 @@ public class HomePlace extends Place {
 
 		@Override
 		public String getToken(HomePlace place) {
-			return "About";
+			return "Home";
 		}
 
 		@Override

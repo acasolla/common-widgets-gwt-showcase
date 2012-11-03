@@ -1,5 +1,5 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
-<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:it.softphone.rd.gwt.client.widget.base">
 	<ui:with field="res" type="it.softphone.commons.gwt.showcase.client.resources.Resources" />
 	<ui:with field="css" type="it.softphone.commons.gwt.showcase.client.resources.CssResource" />
 
@@ -10,6 +10,7 @@
 		<g:north size='60'>
 			<g:FlowPanel styleName="{css.getMainCss.mainTopContainer}">
 				<g:HTML text="GWT Common Widgets" />
+				<b:HTMLLink ui:field="home">Home</b:HTMLLink>
 			</g:FlowPanel>
 		</g:north>
 		<g:center>

@@ -45,7 +45,7 @@ public class MainActivity extends AbstractActivity {
 		final MainView mainPanel = clientFactory.getMainView();
 		if ( place == null ) return;
 	
-		IsWidget page = clientFactory.getAboutView();
+		IsWidget page = clientFactory.getHomeView();
 	
 		if ( place instanceof MaskPlace ){
 			page = clientFactory.getMaskView();
