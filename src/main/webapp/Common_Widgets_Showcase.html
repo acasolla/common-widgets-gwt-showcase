@@ -27,59 +27,37 @@
    <style type="text/css">
   
  
-  #content {
-	
-	height:100%;
-	}
-    #loading {
-	font-stretch: normal;
-	font-variant: normal;
-	font-style: normal;
-	font-family: sans-serif;
-	font-weight: normal;
-    display: block;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    text-align: center;
-    margin-left: -200px;
-}
-
-#top-claim-loading{
-	color: White;
-	background-color:#ef001f;
-	font-stretch: normal;
-	font-variant: normal;
-	font-style: normal;
-	font-family: sans-serif;
-	font-weight: normal;
-	font-size: 30px;
-
+/* red  */
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+	  background: -webkit-gradient(linear, literal("left top"),
+            literal("left bottom"), from(#AF3B2C), to(#a61904) );
 
 }
-#top-claim2-loading{
-	color: White;
-	font-stretch: normal;
-	font-variant: normal;
-	font-style: normal;
-	font-family: sans-serif;
-	font-weight: normal;
-	position:relative;
-	font-size: 12px;
-	float:right;
-	padding-right:5px;
-}
-#text-loading{
-	color: White;
-	font-stretch: normal;
-	font-variant: normal;
-	font-style: normal;
-	font-family: sans-serif;
-	font-weight: bold;
-	position:relative;
-	font-size: 14px;
 
+
+/* green   
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-image: -webkit-gradient(linear, 0% 100%, 0% 0%,  from(#618E8E), to(#557878), color-stop(.5,#70A5A5),color-stop(.4,#70A5A5));
 }
+*/
+
+.centeredImage
+    {		
+  position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 40px;
+   height: 40px;
+   margin-top: -20px; /* Half the height */
+   margin-left: -20px; /* Half the width */   }
     </style>
   </head>
 
@@ -89,32 +67,11 @@
   <!-- to create a completely dynamic UI.        -->
   <!--                                           -->
   <body>
-    <div id="loading"><p>Loading</p> <BR/>
-    <img src="/images/ajax-loader.gif" />
+    <div id="loading">
+    <img src="/images/ajax-loader.gif" class="centeredImage"/>
     </div>
     <!-- OPTIONAL: include this if you want history support -->
     <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position:absolute;width:0;height:0;border:0"></iframe>
 
-    <!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
-    <noscript>
-      <div id="loading" style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
-        Your web browser must have JavaScript enabled
-        in order for this application to display correctly.
-      </div>
-    </noscript>
-
-  
-    <!-- <table align="center">
-      <tr>
-        <td colspan="2" style="font-weight:bold;">Please enter your name:</td>
-      </tr>
-      <tr>
-        <td id="nameFieldContainer"></td>
-        <td id="sendButtonContainer"></td>
-      </tr>
-      <tr>
-        <td colspan="2" style="color:red;" id="errorLabelContainer"></td>
-      </tr>
-    </table> -->
   </body>
 </html>

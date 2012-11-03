@@ -19,6 +19,7 @@
 			<br></br>
 			<br></br>
 		</g:HTMLPanel>
+		<b:HTMLLink ui:field="wiki">Wiki</b:HTMLLink>
 		<b:HTMLLink ui:field="docs">Library javadoc</b:HTMLLink>
 		<b:HTMLLink ui:field="libsource">Library source code</b:HTMLLink>
 		<b:HTMLLink ui:field="showsource">Showcase source code</b:HTMLLink>

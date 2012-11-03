@@ -42,6 +42,11 @@ public class HomeViewImpl extends Composite implements HomeView {
 	
 	}
 
+	@UiHandler("wiki")
+	void onWikiClick(ClickEvent event) {
+		Window.Location.replace("https://github.com/acasolla/common-widgets-gwt/wiki/");
+	}
+
 	@UiHandler("soul")
 	void onSoulClick(ClickEvent event) {
 		Window.Location.replace("http://www.soulsoftware.it/");
