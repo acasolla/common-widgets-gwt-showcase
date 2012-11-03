@@ -15,6 +15,12 @@
  */
 package it.softphone.commons.gwt.showcase.client.activities.about;
 
+import it.softphone.rd.gwt.client.widget.base.HTMLLink;
+
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HTML;
@@ -28,7 +34,19 @@ public class AboutViewImpl extends Composite implements AboutView {
 	
 	public AboutViewImpl() {
 		initWidget(container);
-		container.add(new HTML("About"));
+		container.add(new HTML("<h1>About</h1>"));
+		HTMLLink link = new HTMLLink("javadoc");
+		link.addClickHandler(new ClickHandler() {
+			
+			@Override
+			public void onClick(ClickEvent event) {
+				
+				Window.Location.replace("http://acasolla.github.com/common-widgets-gwt/");
+				
+			}
+		});
+		
+		container.add(link);
 	}
 
 	@Override
