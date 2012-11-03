@@ -329,7 +329,7 @@ public class AdvancedFormDetailDataGridViewImpl extends BaseViewImpl implements 
 
 		//DATE OF BIRTH
 		{
-			final NamedTooltipTextColumn<ExampleAdvancedUser> column = new NamedTooltipTextColumn<ExampleAdvancedUser>("Address") {
+			final NamedTooltipTextColumn<ExampleAdvancedUser> column = new NamedTooltipTextColumn<ExampleAdvancedUser>("Date of Birth") {
 
 				@Override
 				public String getTooltipValue(ExampleAdvancedUser object) {
