@@ -1,6 +1,6 @@
 package it.softphone.commons.gwt.showcase.client;
 
-import it.softphone.commons.gwt.showcase.client.activities.about.AboutPlace;
+import it.softphone.commons.gwt.showcase.client.activities.HomePlace;
 import it.softphone.commons.gwt.showcase.client.mvp.AppActivityMapper;
 import it.softphone.commons.gwt.showcase.client.mvp.AppHistoryObserver;
 import it.softphone.commons.gwt.showcase.client.mvp.AppPlaceHistoryMapper;
@@ -51,7 +51,7 @@ public class CommonWidgetsGwtShowcase implements EntryPoint{
 
 		CommonPlaceHistoryHandler historyHandler = new CommonPlaceHistoryHandler(historyMapper, historyObserver);
 
-		historyHandler.register(clientFactory.getPlaceController(), clientFactory.getEventBus(), new AboutPlace());
+		historyHandler.register(clientFactory.getPlaceController(), clientFactory.getEventBus(), new HomePlace());
 		historyHandler.handleCurrentHistory();
 		
 		RootPanel.get("loading").setVisible(false);

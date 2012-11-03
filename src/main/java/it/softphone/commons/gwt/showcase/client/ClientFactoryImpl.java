@@ -2,10 +2,10 @@ package it.softphone.commons.gwt.showcase.client;
 
 
 
+import it.softphone.commons.gwt.showcase.client.activities.HomeView;
+import it.softphone.commons.gwt.showcase.client.activities.HomeViewImpl;
 import it.softphone.commons.gwt.showcase.client.activities.MainView;
 import it.softphone.commons.gwt.showcase.client.activities.MainViewImpl;
-import it.softphone.commons.gwt.showcase.client.activities.about.AboutView;
-import it.softphone.commons.gwt.showcase.client.activities.about.AboutViewImpl;
 import it.softphone.commons.gwt.showcase.client.activities.base.HintTextBoxView;
 import it.softphone.commons.gwt.showcase.client.activities.base.HintTextBoxViewImpl;
 import it.softphone.commons.gwt.showcase.client.activities.base.HtmlLinkView;
@@ -42,7 +42,7 @@ public class ClientFactoryImpl implements ClientFactory
 	private static final EventBus eventBus = new SimpleEventBus();
 	private static final PlaceController placeController = new PlaceController(eventBus);
 	private static final MainViewImpl main = new MainViewImpl();
-	private static final AboutViewImpl about = new AboutViewImpl();
+	private static final HomeViewImpl about = new HomeViewImpl();
 
 	private static final HintTextBoxViewImpl hintTextBox = new HintTextBoxViewImpl();
 	private static final MaskViewImpl mask = new MaskViewImpl();
@@ -77,7 +77,7 @@ public class ClientFactoryImpl implements ClientFactory
 
 
 	@Override
-	public AboutView getAboutView() {
+	public HomeView getAboutView() {
 		return about;
 	}
 

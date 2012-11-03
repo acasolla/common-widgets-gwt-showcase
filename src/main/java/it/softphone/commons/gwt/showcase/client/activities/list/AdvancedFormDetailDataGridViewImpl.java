@@ -1,6 +1,6 @@
 package it.softphone.commons.gwt.showcase.client.activities.list;
 
-import it.softphone.commons.gwt.showcase.client.activities.about.BaseViewImpl;
+import it.softphone.commons.gwt.showcase.client.activities.BaseViewImpl;
 import it.softphone.rd.gwt.client.widget.base.filter.FilterCalendarViewImpl;
 import it.softphone.rd.gwt.client.widget.base.filter.FilterEnum;
 import it.softphone.rd.gwt.client.widget.base.filter.FilterTextBox;

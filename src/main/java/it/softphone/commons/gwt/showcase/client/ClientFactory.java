@@ -1,7 +1,7 @@
 package it.softphone.commons.gwt.showcase.client;
 
+import it.softphone.commons.gwt.showcase.client.activities.HomeView;
 import it.softphone.commons.gwt.showcase.client.activities.MainView;
-import it.softphone.commons.gwt.showcase.client.activities.about.AboutView;
 import it.softphone.commons.gwt.showcase.client.activities.base.HintTextBoxView;
 import it.softphone.commons.gwt.showcase.client.activities.base.HtmlLinkView;
 import it.softphone.commons.gwt.showcase.client.activities.base.MaskView;
@@ -25,7 +25,7 @@ public interface ClientFactory
 	PlaceController getPlaceController();
 	
 	MainView getMainView();
-	AboutView getAboutView();
+	HomeView getAboutView();
 	
 	HintTextBoxView getHintTextBoxView();
 	MaskView getMaskView();

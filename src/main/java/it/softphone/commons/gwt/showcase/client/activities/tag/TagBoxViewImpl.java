@@ -1,6 +1,6 @@
 package it.softphone.commons.gwt.showcase.client.activities.tag;
 
-import it.softphone.commons.gwt.showcase.client.activities.about.BaseViewImpl;
+import it.softphone.commons.gwt.showcase.client.activities.BaseViewImpl;
 import it.softphone.rd.gwt.client.widget.base.tag.TagBox;
 
 import com.google.gwt.user.client.ui.HTML;

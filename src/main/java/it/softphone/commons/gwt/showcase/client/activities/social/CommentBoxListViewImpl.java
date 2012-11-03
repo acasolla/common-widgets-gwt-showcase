@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import it.softphone.commons.gwt.showcase.client.activities.about.BaseViewImpl;
+import it.softphone.commons.gwt.showcase.client.activities.BaseViewImpl;
 import it.softphone.rd.gwt.client.widget.base.social.CommentBoxList;
 import it.softphone.rd.model.shared.Feed;
 import it.softphone.rd.model.shared.FeedAction;

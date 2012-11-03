@@ -1,6 +1,6 @@
 package it.softphone.commons.gwt.showcase.client.mvp;
 
-import it.softphone.commons.gwt.showcase.client.activities.about.AboutPlace;
+import it.softphone.commons.gwt.showcase.client.activities.HomePlace;
 import it.softphone.commons.gwt.showcase.client.activities.base.HintTextBoxPlace;
 import it.softphone.commons.gwt.showcase.client.activities.base.HtmlLinkPlace;
 import it.softphone.commons.gwt.showcase.client.activities.base.MaskPlace;
@@ -53,7 +53,7 @@ public class AppHistoryObserver implements HistoryObserver {
 				
 				switch(entry){
 				case ABOUT:
-					place = new AboutPlace();
+					place = new HomePlace();
 					break;
 				case HINT_TEXT_BOX:
 					place = new HintTextBoxPlace();
@@ -97,7 +97,7 @@ public class AppHistoryObserver implements HistoryObserver {
 		
 					
 				default:
-					place = new AboutPlace();
+					place = new HomePlace();
 				
 				}
 				historyHandler.replaceCurrentPlace(place);

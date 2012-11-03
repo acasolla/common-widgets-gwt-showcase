@@ -1,6 +1,6 @@
 package it.softphone.commons.gwt.showcase.client.activities.list;
 
-import it.softphone.commons.gwt.showcase.client.activities.about.BaseViewImpl;
+import it.softphone.commons.gwt.showcase.client.activities.BaseViewImpl;
 import it.softphone.rd.gwt.client.widget.base.list.FormDetailDataGrid;
 import it.softphone.rd.gwt.client.widget.base.list.FormDetailDataGrid.RowDetailWidget;
 import it.softphone.rd.model.shared.Selectable;

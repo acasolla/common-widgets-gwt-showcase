@@ -1,6 +1,6 @@
 package it.softphone.commons.gwt.showcase.client.activities.social;
 
-import it.softphone.commons.gwt.showcase.client.activities.about.BaseViewImpl;
+import it.softphone.commons.gwt.showcase.client.activities.BaseViewImpl;
 import it.softphone.rd.gwt.client.widget.base.HintTextBox;
 import it.softphone.rd.gwt.client.widget.base.social.FeedBox;
 import it.softphone.rd.model.shared.Feed;

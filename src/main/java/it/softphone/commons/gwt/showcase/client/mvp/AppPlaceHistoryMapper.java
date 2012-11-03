@@ -1,7 +1,7 @@
 package it.softphone.commons.gwt.showcase.client.mvp;
 
+import it.softphone.commons.gwt.showcase.client.activities.HomePlace;
 import it.softphone.commons.gwt.showcase.client.activities.MainPlace;
-import it.softphone.commons.gwt.showcase.client.activities.about.AboutPlace;
 import it.softphone.commons.gwt.showcase.client.activities.base.HintTextBoxPlace;
 import it.softphone.commons.gwt.showcase.client.activities.base.HtmlLinkPlace;
 import it.softphone.commons.gwt.showcase.client.activities.base.MaskPlace;
@@ -27,7 +27,7 @@ import com.google.gwt.place.shared.WithTokenizers;
  */
 @WithTokenizers( {MainPlace.Tokenizer.class,
 				  HintTextBoxPlace.Tokenizer.class,
-				  AboutPlace.Tokenizer.class,
+				  HomePlace.Tokenizer.class,
 				  MaskPlace.Tokenizer.class,
 				  PortraitPlace.Tokenizer.class,
 				  RichTextAreaPlace.Tokenizer.class,
