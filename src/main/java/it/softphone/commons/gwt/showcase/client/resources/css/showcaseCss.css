@@ -113,3 +113,17 @@ HOME
 	text-align:center;
 	color: -webkit-link;
 }
+
+/*
+ROW DETAIL WIDGET 
+*/
+
+.rowDetailWidget{
+	background-color: #e7e7e7;
+	
+}
+
+.rowDetailWidget > .gwt-HTML{
+	text-align: center;	
+	font-weight: bold;
+}

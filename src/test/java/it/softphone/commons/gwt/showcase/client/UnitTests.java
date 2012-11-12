@@ -12,21 +12,17 @@ public class UnitTests {
 	
 	@Test
 	public void buildSourceAndStyle() throws Exception{
-		/*
+		
 		String source = readFile("/Users/ale/workspace/eclipse/RD/common-widgets-gwt-parent/common-widgets-gwt-showcase/src/main/java/it/softphone/commons/gwt/showcase/client/CommonWidgetExample.java",
 							"sbSource");
 		logger.info(source);
 				
-		logger.info("\n=================================");
-		logger.info("\n=================================");
-		logger.info("\n=================================");
-		logger.info("\n=================================");
-		logger.info("\n=================================");
-*/
-		String style = readFile("/Users/ale/workspace/eclipse/RD/common-widgets-gwt-parent/common-widgets-gwt/src/main/java/it/softphone/rd/gwt/client/resources/base/css/formDetailDataGrid.css",
+		/*
+		
+		String style = readFile("/Users/ale/workspace/eclipse/RD/common-widgets-gwt-parent/common-widgets-gwt-showcase/src/main/java/it/softphone/commons/gwt/showcase/client/resources/css/showcaseCss.css",
 				"sbStyle");
 		logger.info(style);
-		
+		*/
 
 	}
 	

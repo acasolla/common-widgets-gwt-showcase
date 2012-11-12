@@ -1,6 +1,7 @@
 package it.softphone.commons.gwt.showcase.client.activities.list;
 
 import it.softphone.commons.gwt.showcase.client.activities.BaseViewImpl;
+import it.softphone.commons.gwt.showcase.client.resources.ResourceAware;
 import it.softphone.rd.gwt.client.widget.base.list.FormDetailDataGrid;
 import it.softphone.rd.gwt.client.widget.base.list.FormDetailDataGrid.RowDetailWidget;
 import it.softphone.rd.model.shared.Selectable;
@@ -11,6 +12,7 @@ import java.util.List;
 import com.google.gwt.cell.client.NumberCell;
 import com.google.gwt.cell.client.TextCell;
 import com.google.gwt.user.cellview.client.Column;
+import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Widget;
@@ -31,12 +33,13 @@ public class SimpleFormDetailDataGridViewImpl extends BaseViewImpl implements Si
 
 	public SimpleFormDetailDataGridViewImpl() {
 		RowDetail rowDetail = new RowDetail();
-
+		
 		dataGrid = new FormDetailDataGrid<ExampleUser>(
 				ExampleUser.KEY_PROVIDER,
 				users, 
 				rowDetail, 
-				new ExampleUser("test", "test", 0));
+				new ExampleUser("test", "test", 0),
+				true);
 		
 		dataGrid.setHeight("300px");
 		
@@ -327,6 +330,26 @@ public class SimpleFormDetailDataGridViewImpl extends BaseViewImpl implements Si
 		sbStyle.append("  border: selectionBorderWidth solid #d4e4e4;");
 		sbStyle.append("\n");
 		sbStyle.append("}");
+		sbStyle.append(".rowDetailWidget{");
+		sbStyle.append("\n");
+		sbStyle.append("	background-color: #e7e7e7;");
+		sbStyle.append("\n");
+		sbStyle.append("	");
+		sbStyle.append("\n");
+		sbStyle.append("}");
+		sbStyle.append("\n");
+		sbStyle.append("");
+		sbStyle.append("\n");
+		sbStyle.append(".rowDetailWidget > .gwt-HTML{");
+		sbStyle.append("\n");
+		sbStyle.append("	text-align: center;	");
+		sbStyle.append("\n");
+		sbStyle.append("	font-weight: bold;");
+		sbStyle.append("\n");
+		sbStyle.append("}");
+		sbStyle.append("\n");
+		sbStyle.append("</pre>");
+
 		sbStyle.append("\n");
 		sbStyle.append("</pre>");
 
@@ -432,7 +455,9 @@ public class SimpleFormDetailDataGridViewImpl extends BaseViewImpl implements Si
 		sbSource.append("\n");
 		sbSource.append("				rowDetail, ");
 		sbSource.append("\n");
-		sbSource.append("				new ExampleUser(\"\", \"\", 0));");
+		sbSource.append("				new ExampleUser(\"test\", \"test\", 0),");
+		sbSource.append("\n");
+		sbSource.append("				true);");
 		sbSource.append("\n");
 		sbSource.append("		");
 		sbSource.append("\n");
@@ -544,19 +569,25 @@ public class SimpleFormDetailDataGridViewImpl extends BaseViewImpl implements Si
 		sbSource.append("\n");
 		sbSource.append("");
 		sbSource.append("\n");
-		sbSource.append("class RowDetail implements RowDetailWidget<ExampleUser>{");
+		sbSource.append("class RowDetail implements RowDetailWidget<ExampleUser>,ResourceAware{");
 		sbSource.append("\n");
 		sbSource.append("");
 		sbSource.append("\n");
-		sbSource.append("	private HTML detail = new HTML();");
+		sbSource.append("	private FlowPanel container = new FlowPanel();");
 		sbSource.append("\n");
-		sbSource.append("		");
+		sbSource.append("	");
+		sbSource.append("\n");
+		sbSource.append("	public RowDetail(){");
+		sbSource.append("\n");
+		sbSource.append("		container.addStyleName(css.getMainCss().rowDetailWidget());");
+		sbSource.append("\n");
+		sbSource.append("	}");
 		sbSource.append("\n");
 		sbSource.append("	@Override");
 		sbSource.append("\n");
 		sbSource.append("	public Widget asWidget() {");
 		sbSource.append("\n");
-		sbSource.append("		return detail;");
+		sbSource.append("		return container;");
 		sbSource.append("\n");
 		sbSource.append("	}");
 		sbSource.append("\n");
@@ -566,15 +597,13 @@ public class SimpleFormDetailDataGridViewImpl extends BaseViewImpl implements Si
 		sbSource.append("\n");
 		sbSource.append("	public void setRowItem(ExampleUser item) {");
 		sbSource.append("\n");
-		sbSource.append("		StringBuilder sb = new StringBuilder();");
+		sbSource.append("		container.clear();");
 		sbSource.append("\n");
-		sbSource.append("		sb.append(\"Name : \").append(item.getName());");
+		sbSource.append("		container.add(new HTML(item.getName()));");
 		sbSource.append("\n");
-		sbSource.append("		sb.append(\"<br></br>Surname : \").append(item.getSurname());");
+		sbSource.append("		container.add(new HTML(item.getSurname()));");
 		sbSource.append("\n");
-		sbSource.append("		sb.append(\"<br></br>Age : \").append(item.getAge());");
-		sbSource.append("\n");
-		sbSource.append("		detail.setHTML(sb.toString());");
+		sbSource.append("		container.add(new HTML(String.valueOf(item.getAge())));");
 		sbSource.append("\n");
 		sbSource.append("		");
 		sbSource.append("\n");
@@ -713,9 +742,6 @@ public class SimpleFormDetailDataGridViewImpl extends BaseViewImpl implements Si
 		sbSource.append("");
 		sbSource.append("\n");
 		sbSource.append("</pre>");
-
-		sbSource.append("</pre>");
-
 		sourceContainer.add(new HTML(sbSource.toString()));
 
 		
@@ -778,22 +804,24 @@ public class SimpleFormDetailDataGridViewImpl extends BaseViewImpl implements Si
 
 }
 
-class RowDetail implements RowDetailWidget<ExampleUser>{
+class RowDetail implements RowDetailWidget<ExampleUser>,ResourceAware{
 
-	private HTML detail = new HTML();
-		
+	private FlowPanel container = new FlowPanel();
+	
+	public RowDetail(){
+		container.addStyleName(css.getMainCss().rowDetailWidget());
+	}
 	@Override
 	public Widget asWidget() {
-		return detail;
+		return container;
 	}
 
 	@Override
 	public void setRowItem(ExampleUser item) {
-		StringBuilder sb = new StringBuilder();
-		sb.append("Name : ").append(item.getName());
-		sb.append("<br></br>Surname : ").append(item.getSurname());
-		sb.append("<br></br>Age : ").append(item.getAge());
-		detail.setHTML(sb.toString());
+		container.clear();
+		container.add(new HTML(item.getName()));
+		container.add(new HTML(item.getSurname()));
+		container.add(new HTML(String.valueOf(item.getAge())));
 		
 	}
 	

@@ -13,4 +13,5 @@ public interface ShowcaseCss extends CssResource {
 	String codeContainer();
 	String exampleContainer();
 	String containerHome();
+	String rowDetailWidget();
 }
